@@ -7,7 +7,7 @@ function App() {
   const createVillian=(myhero)=>{
     let temp=[],repeat=0,length=getRandomInt(6,9);
     for (let i = 0; i < length; i++) {
-      let value=getRandomInt(myhero/2,myhero*2);
+      let value=getRandomInt(myhero/2,myhero*2.5);
       if(temp.indexOf(value)===-1) temp.push(value)
     }
     temp.forEach(n=>{if (n<myhero)repeat++ })
