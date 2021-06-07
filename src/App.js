@@ -1,4 +1,4 @@
-import { useState ,useEffect  } from 'react';
+import { useState ,useEffect,useCallback   } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FailModal from './components/modal'
 import Main from './components/main'
@@ -43,7 +43,7 @@ function App() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (a) => setShow(true);
-  const time =()=>timer >=15?handleShow(setTimer(15)):setTimer(timer=>timer+1)
+  const time =useCallback(()=>timer >=15?handleShow(setTimer(15)):setTimer(timer=>timer+1),[timer])
   useEffect(() => {const interval=setInterval(()=>time(),1000);return () => clearInterval(interval);},[time])
   return <>
     <Main timer={timer} hero={hero} villains={villains} level={level} attackOnVillian={attackOnVillian} />
