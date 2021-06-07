@@ -6,4 +6,7 @@ export const StyledCard = styled(Card)`
     &.villian {
         width: 5rem;
     }
+    Img:hover{
+        cursor: pointer;
+    }
 `;
