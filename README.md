@@ -2,7 +2,7 @@
 
 react game that give you a score and a punch of  enemies to kill
 
--you can kill any enemy that have lower score that you 
+-you can kill any enemy that have lower score than you 
 
 -once you kill him , you get half his score
 
